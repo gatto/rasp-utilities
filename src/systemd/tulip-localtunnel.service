@@ -1,0 +1,12 @@
+[Unit]
+Description=LocalTunnel Client Connection
+After=network.target flask-client.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/lt --port 5001 --subdomain tulipgatto
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
