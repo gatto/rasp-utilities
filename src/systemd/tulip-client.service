@@ -1,0 +1,15 @@
+[Unit]
+Description=Flask Client Application
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/path/to/your/repo/client
+ExecStart=/path/to/uv_folder/.venv/bin/python app.py
+Restart=always
+RestartSec=5
+Environment=FLASK_APP=app.py
+Environment=FLASK_ENV=production
+
+[Install]
+WantedBy=default.target
