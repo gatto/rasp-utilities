@@ -9,7 +9,7 @@ ExecStart=/home/fabio/.local/bin/uv run server.py
 Restart=always
 RestartSec=5
 Environment=FLASK_APP=server.py
-Environment=FLASK_ENV=development
+Environment=FLASK_ENV=production
 
 [Install]
 WantedBy=default.target

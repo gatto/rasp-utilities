@@ -3,7 +3,7 @@ Description=Check for updates to Flask apps
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/check-flask-updates.fish
+ExecStart=/home/fabio/repos/rasp-utilities/tulip/check-tulip-updates.fish
 
 [Install]
 WantedBy=default.target
