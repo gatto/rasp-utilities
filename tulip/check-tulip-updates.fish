@@ -2,7 +2,7 @@
 
 # Configuration - update these paths
 set REPO_PATH "/home/fabio/repos/tulip"
-set LOG_FILE "/var/log/flask-apps-update.log"
+set LOG_FILE "/home/fabio/local/logs/flask-apps-update.log"
 
 # Change to repository directory
 cd $REPO_PATH
