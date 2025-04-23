@@ -4,12 +4,12 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/path/to/your/repo/server
-ExecStart=/path/to/uv_folder/.venv/bin/python app.py
+WorkingDirectory=/home/fabio/repos/tulip/packages/server/src/
+ExecStart=/home/fabio/.local/bin/uv run server.py
 Restart=always
 RestartSec=5
-Environment=FLASK_APP=app.py
-Environment=FLASK_ENV=production
+Environment=FLASK_APP=server.py
+Environment=FLASK_ENV=development
 
 [Install]
 WantedBy=default.target
