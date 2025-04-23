@@ -4,7 +4,9 @@ After=network.target tulip-client.service
 
 [Service]
 Type=simple
-ExecStart=/home/fabio/.local/share/nvm/v23.11.0/bin/lt --port 5001 --subdomain tulipgatto
+ExecStart=/home/fabio/repos/rasp-utilities/tulip/run-localtunnel.fish
+WorkingDirectory=/home/fabio
+Environment=HOME=/home/fabio
 Restart=always
 RestartSec=10
 
