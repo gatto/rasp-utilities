@@ -1,0 +1,14 @@
+#!/usr/bin/env fish
+
+# Configuration - update these paths
+set UV_PATH "/path/to/uv_folder"
+set REPO_PATH "/users/fabio/repos/tulip"
+
+# Update the environment with uv
+cd $REPO_PATH
+uv pip install -r requirements.txt
+
+# Restart the services
+systemctl --user restart flask-client.service
+systemctl --user restart flask-server.service
+systemctl --user restart localtunnel.service
