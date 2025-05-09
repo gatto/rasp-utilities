@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Email Inbox Check every 5 minutes
+Requires=email-check.service
+
+[Timer]
+Unit=email-check.service
+OnBootSec=5min
+OnUnitActiveSec=5min
+AccuracySec=1min
+
+[Install]
+WantedBy=timers.target

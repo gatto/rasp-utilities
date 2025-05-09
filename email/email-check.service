@@ -1,0 +1,20 @@
+[Unit]
+Description=Email Inbox Check
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=fabio
+WorkingDirectory=/home/fabio/repos/rasp-utilities/email
+# Using uv to run the script instead of executing it directly
+ExecStart=/usr/local/bin/uv run email_check.py
+# Alternatively, if uv is installed in a user location:
+# ExecStart=/home/fabio/.local/bin/uv run email_check.py
+StandardOutput=journal
+StandardError=journal
+# Set environment variables if needed
+Environment="XDG_CONFIG_HOME=/home/fabio/.config"
+
+[Install]
+WantedBy=multi-user.target
